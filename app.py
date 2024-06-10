@@ -38,9 +38,9 @@ if st.button("Show recommended movies"):
 
     data_retrieved = Retrieve_data(movies, selected_movie)
     index = data_retrieved.get_index_from_title()
-    recommendations = data_retrieved.recommended_movies(index, 5)
+    recommendations = data_retrieved.recommended_movies(index, 10)
 
-    col1, col2, col3, col4, col5 = st.columns(5)
+    col1, col2, col3, col4, col5, col6, col7, col8, col9, col10 = st.columns(10)
     with col1:
         st.text(recommendations[0])
     with col2:
@@ -51,4 +51,14 @@ if st.button("Show recommended movies"):
         st.text(recommendations[3])
     with col5:
         st.text(recommendations[4])
+    with col6:
+        st.text(recommendations[5])
+    with col7:
+        st.text(recommendations[6])
+    with col8:
+        st.text(recommendations[7])
+    with col9:
+        st.text(recommendations[8])
+    with col10:
+        st.text(recommendations[9])
 
